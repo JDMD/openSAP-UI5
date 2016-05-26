@@ -1,0 +1,12 @@
+<mvc:View
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Carousel>
+		<pages>
+			<Image src="http://tvseriesfinale.com/wp-content/uploads/2016/01/gameofthrones23.jpg" height="400px"/>
+			<Image src="http://www.thinkgeek.com/images/products/zoom/efb7_got_full_world_map_poster.jpg" height="400px"/>
+			<Image src="http://vignette1.wikia.nocookie.net/gameofthrones/images/3/3a/WhiteWalker_(Hardhome).jpg" height="400px"/>
+		</pages>
+	</Carousel>
+</mvc:View>
