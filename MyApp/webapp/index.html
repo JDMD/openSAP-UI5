@@ -10,12 +10,18 @@
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-preload="async">
+			data-sap-ui-preload="async"
+			data-sap-ui-resourceroots='{
+				"opensap.myapp": "./"
+			}'>
 		</script>
 		<script src="https://sap.github.io/openSAP-ui5-course/Validator.js"></script> <!--validator-->
 		<script>
 			sap.ui.getCore().attachInit(function () {
-				alert("SAPUI5 is ready");
+				sap.ui.xmlview({
+					viewName: "opensap.myapp.view.App"
+				}).placeAt("content");
+
 			});
 		</script>
 	</head>
