@@ -1,8 +1,7 @@
 <mvc:View
 	displayBlock="true"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	controllerName="opensap.myapp.controller.App">
+	xmlns="sap.m">
 	<Carousel>
 		<pages>
 			<Image src="http://tvseriesfinale.com/wp-content/uploads/2016/01/gameofthrones23.jpg" height="400px"/>
@@ -10,5 +9,4 @@
 			<Image src="http://vignette1.wikia.nocookie.net/gameofthrones/images/3/3a/WhiteWalker_(Hardhome).jpg" height="400px"/>
 		</pages>
 	</Carousel>
-	<Button text="Say Hello!" press="onShowHello"/>
 </mvc:View>
