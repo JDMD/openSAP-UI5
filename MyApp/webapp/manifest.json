@@ -9,6 +9,17 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources": {
+			"ES4": {
+				"uri": "/destinations/ES4/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"annotations": [],
+					"odataVersion": "2.0",
+					"localUri": ""
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -19,9 +30,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_bluecrystal"]
 	},
 	"sap.ui5": {
 		"_version": "1.2.0",
@@ -59,6 +68,9 @@
 			"address": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/Address.json"
+			},
+			"": {
+				"dataSource": "ES4"
 			}
 		},
 		"contentDensities": {
