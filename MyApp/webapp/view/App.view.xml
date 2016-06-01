@@ -63,7 +63,22 @@
 							</IconTabFilter>
 							<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
 								<content>
-									<List headerText="{i18n>productListTitle}" items="{/ProductSet}">
+									<List
+										id="productsList"
+										items="{
+											path: '/ProductSet',
+											sorter: {
+												path: 'Category',
+												group: true
+											}
+										}">
+										<headerToolbar>
+											<Toolbar>
+												<Title text="{i18n>productListTitle}" />
+												<ToolbarSpacer />
+												<SearchField width="50%" search="onFilterProducts" />
+											</Toolbar>
+										</headerToolbar>
 										<items>
 											<ObjectListItem
 												title="{Name}"
@@ -79,7 +94,7 @@
 													
 												}"
 												numberState="{= ${Price} > 500 ? 'Error' : 'Success'}"
-												intro="{ProductId}"
+												intro="{ProductID}"
 												numberUnit="{CurrencyCode}">
 												<firstStatus>
 													<ObjectStatus text="{
