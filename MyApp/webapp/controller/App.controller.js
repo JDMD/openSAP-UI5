@@ -34,6 +34,16 @@ sap.ui.define([
 			}
 			//apply filter. if the filter is empty, all the entries will be shown
 			oBinding.filter(aFilter);
+		},
+		
+		onItemSelected: function(oEvt) {
+			var oSelectedItem = oEvt.getSource();
+			var oContext = oSelectedItem.getBindingContext();
+			var sPath = oContext.getPath();
+			var oProductDetailsPanel = this.byId("productDetailsPanel");
+			
+			oProductDetailsPanel.bindElement({path: sPath});
+			oProductDetailsPanel.setVisible(true);
 		}
 	});
 });
