@@ -65,6 +65,20 @@
 									<Button text="{i18n>layoutPublishButton}" icon="sap-icon://outbox" type="Accept"/>
 									<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save"/>
 								</Toolbar>
+								<Panel id="locationPanel"
+										headerText="{i18n>locationPanel}">
+									<content>
+										<Image src="{
+											parts: [
+												{path: 'address>/HouseNumber'},
+												{path: 'address>/Street'},
+												{path: 'address>/City'},
+												{path: 'address>/Country'}
+											],
+											formatter: '.formatMapUrl'
+										}" />
+									</content>
+								</Panel>
 							</IconTabFilter>
 							<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
 								<content>

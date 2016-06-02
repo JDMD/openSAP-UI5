@@ -3,11 +3,14 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	"opensap/myapp/model/formatter"
-], function(Controller, MessageToast, Filter, FilterOperator, formatter) {
+	"opensap/myapp/model/formatter",
+	"opensap/myapp/model/formatMapUrl"
+], function(Controller, MessageToast, Filter, FilterOperator, formatter, formatMapUrl) {
 	"use strict";
 	return Controller.extend("opensap.myapp.controller.App", {
 		formatter: formatter,
+		
+		formatMapUrl: formatMapUrl,
 
 		onShowHello: function() {
 			// get msg from i18n model
